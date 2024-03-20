@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+:root {
+	--border-radius: 0.2rem;
+}
+
+* {
+	font-family: "Poppins", sans-serif;
+	box-sizing: border-box;
+	color: #081932;
+}
+
+body {
+	background: #5094e3;
+	overflow: hidden;
+	display: grid;
+	place-items: center;
+	height: 100vh;
+}
+
+button {
+	outline: none;
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 5px 10px;
+	background: #364aa1;
+	color: white;
+	border-radius: var(--border-radius);
+	transition: 0.2s;
+}
+
+button:disabled:hover {
+	background: #546bcf;
+	cursor: not-allowed;
+}
+
+button:disabled {
+	background: #546bcf;
+	cursor: not-allowed;
+}
+
+button:hover {
+	background: #212e6a;
+}
+
+.container {
+	background: rgba(255, 255, 255, 0.15);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	backdrop-filter: blur(8.5px);
+	-webkit-backdrop-filter: blur(8.5px);
+	border-radius: 10px;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	width: 400px;
+	padding: 20px;
+}
+
+.password-generator__title {
+	margin-bottom: 20px;
+	font-size: 24px;
+	font-weight: 600;
+	text-align: center;
+	border-bottom: 1px solid rgb(28, 72, 116);
+}
+
+.password-generator__body {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.password-text,
+.sub-title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-weight: 500;
+}
+
+.password-length {
+	width: 100%;
+}
+
+.password-length input {
+	width: 100%;
+}
+
+.password-text {
+	padding: 10px;
+	background: #adcef1;
+	border-radius: var(--border-radius);
+}
+
+.sub-title {
+	margin-bottom: 5px;
+}
+
+.password-requires {
+	display: grid;
+	grid-template-columns: auto auto;
+	gap: 10px;
+}
+
+.checkbox {
+	display: flex;
+	gap: 5px;
+	align-items: flex-start;
+	font-size: 12px;
+}
+
+.generate-password {
+	width: 100%;
+	padding: 10px 20px;
+}
+
+.error-message {
+	font-size: 16px;
+	color: red;
+	font-style: italic;
+}
+
+.password-requires input,
+.password-requires label {
+	cursor: pointer;
+}
